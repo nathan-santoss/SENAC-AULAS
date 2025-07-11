@@ -3,9 +3,6 @@
 p: Paulo é paulista
 q: Ronaldo é carioca
 
-
-
-
 a) ~q
 b) p ^ q
 c) p v q
