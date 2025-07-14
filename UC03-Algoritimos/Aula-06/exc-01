@@ -1,0 +1,33 @@
+programa {
+  
+  cadeia nomeuser
+  const inteiro anofab = 2025
+  cadeia produto1
+  real preco
+  inteiro quantidade
+
+
+  funcao inicio() {
+    escreva("Olá, para começarmos, digite seu nome: ")
+    leia(nomeuser)
+    escreva("Muito prazer em te conhecer, " + nomeuser)
+    escreva("\n", "Agora digite o produto que deseja inserir na loja: ")
+    leia(produto1)
+
+    escreva("Certo, agora me informe o preço desejado na venda: ")
+    leia(preco)
+
+    escreva("Muito bem, " + nomeuser + ". então seu produto será um(a) " + produto1 + " e o preço da venda será por R$" + preco)
+    escreva("\n" ,"Lembrando que o ano de fabricação do mesmo é " + anofab)
+    escreva("\n", "Me informa a quantidade dos produtos ")
+    leia(quantidade)
+
+    escreva("\n", "Muito bem, então ao total temos: " + quantidade + " ao total disponível para vender!")
+    escreva("\n" + "O valor estimado em béns à venda é:  R$" + ((preco * quantidade)))
+    
+
+
+
+
+  }
+}
