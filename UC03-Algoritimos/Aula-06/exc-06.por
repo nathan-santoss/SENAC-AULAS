@@ -1,3 +1,17 @@
+/* 6. Crie um algoritmo para Conversão de Moeda: 
+
+  ->Elabore um programa que converta um valor em reais
+  para dólares e para euro;
+
+  ->Peça ao usuário que insira a quantia em reais e exiba o
+  equivalente em dólares e depois em euros;
+
+  ->Considere uma taxa de conversão fixa para dólares e
+  para euro.
+
+*/
+
+
 programa {
 
   real moedaBRL

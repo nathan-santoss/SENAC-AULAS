@@ -1,3 +1,14 @@
+
+/* 3. Crie um pseudocódigo:
+
+  -> Que receba 2 números;
+
+  -> Calcule as operações básicas (soma, subtração,
+  multiplicação e divisão);
+
+  -> Mostre o resultado na tela. */
+
+
 programa {
 
   real n1
@@ -18,9 +29,6 @@ programa {
       "\n", "SOMA: ", n1, " + ", n2, " = ", n1 + n2,
       "\n", "SUBTRAÇÃO: ", n1, " - ", n2, " = ", n1 - n2,
       "\n", "DIVISÃO: ", n1, " / ", n2, " = ", n1 / n2,
-      "\n", "MULTIPLICAÇÃO: ", n1, " * ", n2, " = ", n1 * n2
-
-      
-    )
+      "\n", "MULTIPLICAÇÃO: ", n1, " * ", n2, " = ", n1 * n2)
   }
 }

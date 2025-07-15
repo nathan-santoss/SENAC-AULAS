@@ -1,3 +1,19 @@
+/* 1. Crie um algoritmo para Produto:
+  Crie variáveis para guardar os seguintes valores: nome,
+  preço, quantidade e ano de fabricação do produto.
+
+  -> A variável ano de fabricação terá valor fixo igual a
+  2025.
+
+  -> Solicite ao usuário os outros valores e armazene nas
+  respectivas variáveis.
+    - Por fim, mostre o seguinte resultado:
+    - O produto X foi fabricado em X.
+    - O preço é R$ X para o X.
+    - Há X unidades disponíveis do produto X       */
+
+
+
 programa {
 
   cadeia nomeuser

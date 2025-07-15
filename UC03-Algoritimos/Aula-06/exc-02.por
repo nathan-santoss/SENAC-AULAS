@@ -1,3 +1,14 @@
+/*  2. Crie um algoritmo para Boleto de Pagamento: 
+
+  -> Elabore um programa que gere um boleto de
+pagamento.
+
+  -> Solicite ao usuário que insira o nome do beneficiário, o
+valor do boleto e a data de vencimento.
+
+  -> Exiba essas informações formatadas na tela.    */
+
+
 programa {
 
   cadeia beneficiario

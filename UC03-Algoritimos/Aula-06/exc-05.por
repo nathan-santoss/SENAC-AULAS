@@ -1,3 +1,11 @@
+/* 5. Crie um algoritmo para Cálculo de Média:
+  
+  -> Desenvolva um programa que peça ao usuário para
+  digitar três notas e calcule a média delas.
+
+  -> Em seguida, exiba a média na tela. */
+
+
 programa {
 
   real n1

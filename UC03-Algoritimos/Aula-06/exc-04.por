@@ -1,3 +1,14 @@
+/* 4. Crie um pseudocódigo que produza a saída:
+
+  EXEMPLO:
+
+  -> "Digite seu peso(em kg): 91
+  -> "Digite sua altura(em metros): 1.86
+  -> "Seu IMC é = 26.3   
+  
+  -> O texto negritado significa a entrada do usuário  */
+
+
 programa {
 
   cadeia userName
