@@ -1,4 +1,4 @@
-programa {
+programa {inclua biblioteca Matematica
 
   real pinturaMetros
   real lataDeTinta = 80
@@ -11,12 +11,10 @@ programa {
     leia(pinturaMetros)
 
     real litro_por_metro = pinturaMetros / 3
-    real latas_necessarias = (litro_por_metro / litro_lata)
-
-        se(litro_por_metro)
+    inteiro latas_necessarias = (litro_por_metro / litro_lata) + 1
     real gasto_total = latas_necessarias * lataDeTinta
 
-    escreva("A parede tem ", pinturaMetros,"m². Então será necessário ", litro_por_metro,"m² para pintar.", "\n" )
+    escreva("A parede tem ", pinturaMetros,"m². Então será necessário ", Matematica.arredondar(litro_por_metro, 2),"m² para pintar.", "\n" )
 
     escreva("\n", "RESULTADO FINAL: ", "\n")
     escreva("VALOR DA LATA = R$", lataDeTinta, "\n")

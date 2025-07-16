@@ -12,7 +12,7 @@
     -> calcule os descontos e o salário líquido.
 */
 
-programa {
+programa {inclua biblioteca Matematica
   real salarioHora
   real horasT
   inteiro minutosT
@@ -44,16 +44,23 @@ programa {
     real salarioLiq = salario - totalDESC
 
 
-    escreva("CALCULANDO DESCONTOS... RESULTADOS ABAIXO:", "\n")
-
-    escreva("Salário bruto = R$", salario, "\n")
-    escreva("Valor pago no IMPOSTO DE RENDA = R$", resultadoIR, "\n")
-    escreva("Valor pago no INSS = R$", resultadoINSS, "\n")
-    escreva("Valor pago no SINDICATO = R$", resultadoSIND, "\n")
-    escreva("VALOR TOTAL EM DESCONTOS = R$", totalDESC, "\n")
-    escreva("Seu salário líquido após os descontos é de R$", salarioLiq, "\n")
     
 
+    escreva("CALCULANDO DESCONTOS... RESULTADOS ABAIXO:", "\n")
+
+    escreva("Salário bruto = R$", Matematica.arredondar(salario, 2), "\n")
+    escreva("Valor pago no IMPOSTO DE RENDA = R$", Matematica.arredondar(resultadoIR, 2), "\n")
+    escreva("Valor pago no INSS = R$", Matematica.arredondar(resultadoINSS, 2), "\n")
+    escreva("Valor pago no SINDICATO = R$", Matematica.arredondar(resultadoSIND, 2), "\n")
+    escreva("VALOR TOTAL EM DESCONTOS = R$", Matematica.arredondar(totalDESC, 2), "\n")
+    escreva("Seu salário líquido após os descontos é de R$", Matematica.arredondar(salarioLiq, 2), "\n")
+    
+    
+    
+    
+    
+    
+    
     
   }
 }
