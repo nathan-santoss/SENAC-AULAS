@@ -26,16 +26,16 @@ programa {
     escreva("Digite o valor em REAIS (R$) para conversão: R$" )
     leia(moedaBRL)
 
-    const real conversaoDOLAR = (moedaBRL * DOLAR)
-    const real conversaoEURO = (moedaBRL * EURO)
+    const real conversaoDOLAR = (moedaBRL / DOLAR)
+    const real conversaoEURO = (moedaBRL / EURO)
 
     escreva(
       "\n", "O valor em DOLAR (US$) é = ", "R$", conversaoDOLAR, "\n",
-      "O valor em EURO (€) é = ", conversaoEURO, "\n", "\n")
+      "O valor em EURO (€) é = €", conversaoEURO, "\n", "\n")
 
     escreva("Na casa de cambio com a taxa de IOF: ", "\n",
-    "Total + taxa (DOLAR) =  ", "R$", (conversaoDOLAR * 1.10 ), "\n",
-    "Total + taxa (EURO) =  ", "R$", (conversaoEURO * 1.10))
+    "Total + taxa (DOLAR) =  ", "US$", (conversaoDOLAR * 1.10 ), "\n",
+    "Total + taxa (EURO) =  ", "€", (conversaoEURO * 1.10))
 
 
     
