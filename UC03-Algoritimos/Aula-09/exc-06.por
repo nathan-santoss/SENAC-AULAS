@@ -18,14 +18,18 @@ programa {
       se (delta < 0){
         resultado = "Delta não possui raízes reais pois é = "
       }
-      senao se(delta == 0){
+      senao{
+          se(delta == 0){
         resultado = "Delta possui apenas uma raiz real pois é = "
+        x = (- b + Matematica.raiz(delta, 2)) / (2*a)
+        x2 = (- b - Matematica.raiz(delta, 2)) / (2*a)
       }
       senao se(delta > 0){
         resultado = "Delta possui duas raizes reais pois é = "
+        x = (- b + Matematica.raiz(delta, 2)) / (2*a)
+        x2 = (- b - Matematica.raiz(delta, 2)) / (2*a)
       }
-      x = (- b + Matematica.raiz(delta, 2)) / (2*a)
-      x2 = (- b - Matematica.raiz(delta, 2)) / (2*a)
+      
 
       escreva(
         "---RESULTADOS---\n",
@@ -38,6 +42,8 @@ programa {
         "\nX2 = ", x2
       )
     }
+      
+  }
 
   }
   }
