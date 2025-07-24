@@ -5,7 +5,7 @@ programa {
   cadeia tipo_triangulo
 
   funcao inicio() {
-    escreva("Me informe o valor dos lados dos triângulos para resolução.")
+    escreva("Me informe o valor dos lados dos triângulos para resolução.\n")
     escreva("Digite o valor do lado A = ")leia(lado_a)
     escreva("Digite o valor de lado B = ")leia(lado_b)
     escreva("Para finalizar, digite o lado C = ")leia(lado_c)
