@@ -17,33 +17,39 @@ programa {
       delta = Matematica.potencia(b, 2) - 4*a*c
       se (delta < 0){
         resultado = "Delta não possui raízes reais pois é = "
+        escreva(resultado,delta)
       }
-      senao{
+        senao{
           se(delta == 0){
-        resultado = "Delta possui apenas uma raiz real pois é = "
-        x = (- b + Matematica.raiz(delta, 2)) / (2*a)
-        x2 = (- b - Matematica.raiz(delta, 2)) / (2*a)
-      }
-      senao se(delta > 0){
-        resultado = "Delta possui duas raizes reais pois é = "
-        x = (- b + Matematica.raiz(delta, 2)) / (2*a)
-        x2 = (- b - Matematica.raiz(delta, 2)) / (2*a)
-      }
-      
+            resultado = "Delta possui apenas uma raiz real pois é = "
+            x = (- b + Matematica.raiz(delta, 2)) / (2*a)
 
-      escreva(
-        "---RESULTADOS---\n",
-        resultado,delta,
-        "\nSendo assim ficamos com as raizes abaixo:\n",
-        "A = ",a,
-        "\nB = ",b,
-        "\nC = ",c,
-        "\nX = ", x,
-        "\nX2 = ", x2
-      )
+            escreva(
+            "---RESULTADOS---\n",
+            resultado,delta,
+            "\nSendo assim ficamos com a raize abaixo:\n",
+            "A = ",a,
+            "\nB = ",b,
+            "\nC = ",c,
+            "\nX = ", x)
+          }
+          senao se(delta > 0){
+            resultado = "Delta possui duas raizes reais pois é = "
+            x = (- b + Matematica.raiz(delta, 2)) / (2*a)
+            x2 = (- b - Matematica.raiz(delta, 2)) / (2*a)
+
+            escreva(
+            "---RESULTADOS---\n",
+            resultado,delta,
+            "\nSendo assim ficamos com as raizes abaixo:\n",
+            "A = ",a,
+            "\nB = ",b,
+            "\nC = ",c,
+            "\nX = ", x,
+            "\nX2 = ", x2)
+          }  
+         
+        }  
     }
-      
   }
-
-  }
-  }
+}
