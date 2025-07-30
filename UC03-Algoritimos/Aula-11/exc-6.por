@@ -10,6 +10,7 @@ programa {inclua biblioteca Matematica
     para(i = 1; i <=quantidade; i++){
       escreva("Insira o ",i,"° número = ")leia(num)//repetição determinada pelo usuário
       soma = soma + num //soma acumulativa dos número, soma começa com 0 e vai alterando o valor (acumulando)
+      media = soma/quantidade
       se(num%2 == 0){ //se o resto é 0, então é par
         pares = pares+1 
       }
