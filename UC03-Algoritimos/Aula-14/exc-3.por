@@ -1,28 +1,34 @@
 programa {
-  inteiro num, i
-  inteiro pos_positivo = 0, pos_negativo = 0  //"pos" para representar a posição atual no array
-  inteiro positivos[20], negativos[20] //precisam comportar 20 cada, pois o usuário pode digitar uma opção só
+  inteiro totais[20]
+  inteiro t_posi = 0, t_neg = 0, num, i
+  inteiro posicao1 = 0, posicao2 = 0
   funcao inicio() {
     para(i = 0; i < 20; i++){
-      escreva("Informe o ",i+1,"° número -> ")leia(num) //estrutura para identificar positivos e negativos
+      escreva("Informe o ",i+1,"° número -> ")leia(num)
+      totais[i] = num
 
-      se(num >= 0 ){
-        positivos[pos_positivo] = num //usuário insere o número na posição atual do marcador (inicialmente zero)
-        total_positivo++} // aqui aumenta +1 na posição, permitindo que caso o usuário queira, digitar um novo positivo/negativo
+      se(num >= 0){
+        t_posi++}
       senao{
-        negativos[pos_negativo] = num
-        pos_negativo++
+        t_neg++}
+    }
+    inteiro positivos[t_posi], negativos[t_neg]
+
+    para(i = 0; i < 20; i++){
+      se(totais[i] >= 0){
+        positivos[posicao1] = totais[i]
+        posicao1++
+      }
+      senao{
+        negativos[posicao2] = totais[i]
+        posicao2++
       }
     }
-    //Segunda estrutura de repetição para imprimir de acordo com a posição do array
-    escreva("positivos = ")
-    para(i = 0; i < pos_positivo;i++){
-      escreva(positivos[i]," ")
-    }
-    escreva("\nnegativos = ")
-    para(i = 0; i < pos_negativo;i++){
-      escreva(negativos[i]," ")
-    }
+
+    escreva("\nPOSITIVOS = ", positivos)
+    
+    escreva("\nNEGATIVOS = ", negativos)
+
     
   }
 }
