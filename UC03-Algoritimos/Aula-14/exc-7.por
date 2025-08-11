@@ -5,8 +5,7 @@ programa {inclua biblioteca Matematica --> m
     escreva("Informe a quantidade de números a serem digitados -> ")leia(qtde)
     real numeros[qtde]
     para(i = 0; i < qtde; i++){
-      escreva("\ndigite o ",i+1,"° número = ")leia(num)
-      numeros[i] = num
+      escreva("\ndigite o ",i+1,"° número = ")leia(numeros[i])    
     }
     escreva("\nNosso vetor ficou = ",numeros)
 
