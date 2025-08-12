@@ -22,7 +22,7 @@ programa {inclua biblioteca Tipos --> t
     se(menor == valores[0]){
       escreva("\nO número não possui anterior\n")
     }
-    senao{  
+    senao{
       anterior = valores[posicao-1]
       escreva("\nO número anterior é = ",anterior)
     }
