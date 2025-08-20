@@ -4,11 +4,12 @@ const prompt = promptSync()
 
 const area_m2 = Number(prompt("Informe a àrea que irá ser pintada em m² => "))
 let total_litros = (area_m2/6)*1.10 //1.10 representando 100% + 10% do valor
-let result_latas = Math.ceil(total_litros/18) //arrendando para cima, assim sabe-se o total só de latas
+let result_latas = Math.ceil(total_litros/18) //arrendando para cima, assim sabe-se o total só de latas e galões
 let result_galoes = Math.ceil(total_litros/3.6)
 
 console.log(`\nCaso o usuário opte por pintar os ${area_m2}m², precisará de ${total_litros.toFixed(2)} litros.`);
 console.log(`O mesmo terá essas opções de uso:`);
+
 console.log(`
     Usando latas de tinta com 18 litros = ${Math.ceil(total_litros/18)} lata(s) pagando R$${result_latas*99};
     Usando galões de 3,6 litros = ${Math.ceil(total_litros/3.6)} galõe(s) pagando R$${result_galoes*25}\n`);

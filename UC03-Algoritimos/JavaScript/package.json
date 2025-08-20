@@ -1,5 +1,5 @@
 {
-  "name": "aula-1",
+  "name": "JavaScript",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -8,5 +8,8 @@
   },
   "author": "nathan-santos",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
