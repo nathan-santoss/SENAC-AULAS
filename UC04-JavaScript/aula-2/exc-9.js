@@ -14,11 +14,10 @@ export default function(){
             console.log('O valor não é válido, tente novamente!');
         }
         else{
-            // CÁLCULOS: Fazemos todos os cálculos e armazenamos os resultados.
             let resto = valor_saque;
 
-            let notas100 = Math.floor(resto / 100);
-            resto = resto % 100;
+            let notas100 = Math.floor(resto / 100); // quantas notas de 100 cabem no valor do saque 
+            resto = resto % 100; // verifico o resto que está faltando das notas de 100
 
             let notas50 = Math.floor(resto / 50);
             resto = resto % 50;
