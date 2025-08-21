@@ -2,10 +2,8 @@ import promptSync from 'prompt-sync'
 const prompt = promptSync()
 
 console.log("Vamos iniciar a execução das atividades abaixo\n");
-let i
-let j
-let flag = true
 
+let flag = true
 do{
     let aula = Number(prompt("Informe qual a aula (em números) => "))
     let atv = Number(prompt("Agora informe qual a atividade em questão => "))
@@ -40,6 +38,7 @@ do{
                 break
             default:
                 console.log("Resposta inválida, digite novamente!\n");
+                break
         }
     }while(invalido == true)
 
