@@ -25,8 +25,9 @@ do{
     }
     
     let invalido = true
-    do{
-        let decisao = Number(prompt(`Deseja continuar? [1]SIM ou [2]NÃO -> `))
+    do{ 
+        console.log('\nDeseja checar outro arquivo? [1] SIM ou [2] NÃO;');
+        let decisao = Number(prompt(`--> `))
         switch(decisao){
             case 1:
                 flag = true
