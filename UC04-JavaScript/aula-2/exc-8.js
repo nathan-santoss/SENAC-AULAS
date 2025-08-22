@@ -19,7 +19,9 @@ export default function(){
                     console.log(`${dezenas} dezenas`);}
 
             unidades = num%10 // o resto sempre gera o último numero, ou seja, a unidade
-                console.log(`${unidades} unidades`);            
+                console.log(`${unidades} unidades`);   
+                
+            flag = true
         }else{
             console.log('O NÚMERO NÃO É VÁLIDO, TENTE NOVAMENTE\n');
             flag = false
