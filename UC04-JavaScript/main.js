@@ -13,7 +13,8 @@ do{
         const modulo = await import(pasta)
 
         if(modulo.default){
-            console.log(`Executando abaixo atividade ${atv}\n`);
+            console.log(`
+                ----- Executando abaixo atividade ${atv} da aula ${aula}-----\n`);
             modulo.default()           
         }
         else{
