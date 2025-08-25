@@ -14,27 +14,27 @@ export default function(){
         switch(tipo){
             case 1:
                 tipo = 'EURO'
-                convertido = dinheiro*6.35
+                convertido = dinheiro/6.35
                 simbolo = '€'
                 break
             case 2:
                 tipo = 'DOLAR'
-                convertido = dinheiro*5.42
+                convertido = dinheiro/5.42
                 simbolo = '$'
                 break
             case 3:
                 tipo = 'PESO'
-                convertido = dinheiro*0.0042
+                convertido = dinheiro/0.0042
                 simbolo = '$'
                 break
             case 4:
                 tipo = 'LIBRA'
-                convertido = dinheiro*7.32
+                convertido = dinheiro/7.32
                 simbolo = '£'
                 break
             case 5:
                 tipo = 'FRANCO'
-                convertido = dinheiro*6.75
+                convertido = dinheiro/6.75
                 simbolo = '₣'
                 break
             default:

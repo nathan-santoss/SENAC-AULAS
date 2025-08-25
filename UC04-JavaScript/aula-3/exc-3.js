@@ -9,7 +9,6 @@ export default function(){
             ----- INTERROGATÓRIO -----\n
             Vamos realizar algumas perguntas contigo, certo? Responda de acordo com as opções.\n`);
         let positivo = 0
-        let negativo = 0
         let i
         let u_procedencia
 
@@ -30,7 +29,6 @@ export default function(){
                     positivo++
                     break
                 case 2:
-                    negativo++
                     break
                 default:
                     console.log('RESPOSTA INVÁLIDA, TENTE NOVAMENTE!');

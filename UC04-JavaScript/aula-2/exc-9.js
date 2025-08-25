@@ -33,7 +33,7 @@ export default function(){
             resto = resto%5
 
             let notas2 = Math.floor(resto/2)
-            resto = resto % 2
+            resto = resto % 2 // calculo antecipado do saque finalizado
 
             if(resto == 1){ // testando se na distribuição de notas, haverá alguma sobra
                 if(notas5 > 0){ //testando se existe pelo menos uma nota de 5
