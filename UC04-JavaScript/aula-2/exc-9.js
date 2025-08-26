@@ -46,7 +46,29 @@ export default function(){
                     notas5++ // coloco mais uma nota de 5
                     notas2 = notas2 + 3 // e mais 3 notas de 2
                     resto = 0 // att
+                }else if(notas20 > 0){
+                    notas20--
+                    notas10++
+                    notas5++
+                    notas2 = notas2 + 3
+                    resto = 0
+                }else if(notas50 > 0){
+                    notas50--
+                    notas20 = notas20 + 2
+                    notas10++
+                    notas5++
+                    notas2 = notas2 + 3
+                    resto = 0
+                }else if(notas100 > 0){
+                    notas100--
+                    notas50++
+                    notas20++
+                    notas10++
+                    notas5++
+                    notas2 = notas2 + 3
+                    resto = 0
                 }
+
             }
             // impressão de resultados 
 

@@ -66,7 +66,8 @@ export default function(){
                     switch(operacao){
                         case 1:
                             // math.pow calcula a potenciação
-                            console.log(`A raiz ${expoente} de ${num} é = ${Math.pow(num, 1/expoente)}`); //fracionar o expoente, é processo contrário da potenciação = raiz
+                            console.log(`A raiz ${expoente} de ${num} é = ${Math.pow(num, 1/expoente)}`); 
+                            //fracionar o expoente, é processo contrário da potenciação = raiz
                             break
                         case 2:
                             console.log(`${num} elevado à ${expoente} é = ${Math.pow(num, expoente)}`);
