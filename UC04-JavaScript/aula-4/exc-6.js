@@ -23,7 +23,7 @@ export default function(){
         despesa = prompt('---> ')
         console.log('VALOR');
         valor = Number(prompt('--->R$'))
-        if(despesa.trim() !== "" && valor > 0){
+        if(despesa.trim() !== "" && valor >= 0){
             total = total + valor
             if(valor > maiorGasto){
                 maiorGasto = valor
