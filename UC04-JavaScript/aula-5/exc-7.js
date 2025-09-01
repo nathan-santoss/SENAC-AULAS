@@ -87,8 +87,8 @@ export default function(){
 
     console.log(`
         [----- PESQUISA -----]\n
-        Maior indice --> ${maiorIndice.indice} (${maiorIndice.nome})\n
-        Menor indice --> ${menorIndice.indice} (${menorIndice.nome})\n
+        Maior indice --> ${maiorIndice.indice} (${maiorIndice.nome} %)\n
+        Menor indice --> ${menorIndice.indice} (${menorIndice.nome} %)\n
         Média de veiculos nas cidades --> ${Math.ceil(mediaVeic)}\n
         Média de acidentes no RN --> ${mediaRN}`
     );
