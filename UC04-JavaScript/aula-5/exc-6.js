@@ -49,7 +49,7 @@ export default function(){
                 soma = soma + novoAtleta.notas[i] // soma acumulativa das notas
             }
             media = soma/5
-            novoAtleta.media = Number(media).toFixed(2)
+            novoAtleta.media = parseFloat(media.toFixed(2))
 
             listaDeAtletas.push(novoAtleta) // chamo aquele novo objeto (atleta) no final do array
             console.clear()
