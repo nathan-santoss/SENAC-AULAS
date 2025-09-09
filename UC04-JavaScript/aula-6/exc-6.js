@@ -23,7 +23,7 @@ senhas.forEach((senha, i) => { // percorro o array de senhas e meu paramentro in
         senhas[i] = `${senha} = SENHA FORTE <--` // se todos forem verdade, a senha atende os critérios
     }  
     else{
-        senhas[i] = `${senha} = SENHA FRACA (X)`
+        senhas[i] = `${senha} = SENHA FRACA`
     }
 });
 
