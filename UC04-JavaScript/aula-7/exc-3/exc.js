@@ -29,7 +29,10 @@ do{
             estoque = remover(estoque)
             break
         case 5:
-            vendas(estoque)
+            estoque = vendas(estoque)
+            break
+        case 0:
+            flag = false
             break
         default:
             console.log(`A opção ${option} não existe!`);

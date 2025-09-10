@@ -27,7 +27,6 @@ export function add(array){ console.clear()
         let produtoNovo = new item(nome,qtde, preco)
         array.push(produtoNovo)
     }
-    
     return array
 }
 // BUSCAR ITEM (ESTOQUE)
@@ -105,11 +104,12 @@ export function remover(array){
 // gerar venda
 
 export const vendas = (array) =>{
+    let decision = 1
     do {
         console.log(`
             [====== ITENS DISPONÍVEIS =======]
             Escolha de acordo com as opções`);
-        array.forEach(prod,i => {
+        array.forEach((prod,i) => {
             console.log(`
             [${i+1}] ${prod.nome} -> R$${prod.preco} und`);
         });
@@ -118,18 +118,36 @@ export const vendas = (array) =>{
         let selecionado = Number(prompt('Selecione -> '))
         let unidades = Number(prompt('Unidade(s) -> '))
         let carrinho = []
-        carrinho.push(array[selecionado+1])
+        let existe = carrinho.findIndex((prod,i) => prod.nome === array[selecionado-1].nome)
+        if(existe != -1){
+            carrinho[existe].qtde += unidades
+        }
+        else{
+            array[selecionado-1].qtde = unidades
+            carrinhJo.push(array[selecionado-1])
+        }
     
         console.log(`
             [--------- NOTA FISCAL ---------]`);
-            nota(unidades)
-    } while (flag);
-}
-
-
-let nota = (unidades) => {
-    carrinho.forEach(prod,i => {
+        carrinho.forEach(produto => {
+            
+            console.log(`
+                Produto -> ${produto.nome}
+                Preço -> R$${(produto.preco * produto.qtde).toFixed(2)}`);
+        });
         console.log(`
-        [${unidades}] ${prod.nome} -> R$${prod.preco * unidades}`);
-    });   
+            Escolha: [1] Adicionar mais | [2] Finalizar`);
+        decision = Number(prompt('--> '))
+        if(decision === 2){
+            array.forEach(produto => {
+                carrinho.forEach(carrinhoItem => {
+                    if(carrinhoItem.nome === produto.nome){
+                        produto.qtde -= carrinhoItem.qtde
+                    }
+                });
+            });
+            decision = false
+        }
+    } while (decision === 1);
+    return array
 }
