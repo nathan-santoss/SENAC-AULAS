@@ -1,11 +1,12 @@
 import promptSync from 'prompt-sync'
 const prompt = promptSync()
-import {add, atualizarEstoq, buscar, listar, remover, vendas,relatorio} from './funcao.js'
+import {add, buscar, listar, remover, gerarRelatorio, vendas, atualizarEstoq, imprimir} from './funcao.js'
 
 let flag = true
 let estoque = []
+let relatorio  = []
 let carrinho = []
-let lista = []
+
 do{ 
     console.log(`
         Escolha uma das opções
@@ -31,11 +32,13 @@ do{
             estoque = remover(estoque)
             break
         case 5:
-            carrinho = vendas(estoque)
-            estoque = atualizarEstoq(estoque, carrinho)
+            carrinho = vendas(estoque, carrinho)
+            estoque = atualizarEstoq(estoque,carrinho)
+            relatorio = gerarRelatorio(carrinho, relatorio)
             break
-        case 6:
-            lista = relatorio(carrinho,estoque)
+        case 6:            
+            console.clear()
+            imprimir(relatorio)
             break
         case 0:
             flag = false

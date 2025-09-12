@@ -101,21 +101,34 @@ export function remover(array){
     return array
 }
 
-// gerar venda
 
-export const vendas = (array) =>{
-    let carrinho = []
-    let decision = 1
-    do {
+// registrar venda
+export const vendas = (arrayEstoque,carrinho) =>{
+    let decision
+    let total = 0
+    carrinho = []
+    console.clear()
+    do{
         console.log(`
-            [====== ITENS DISPONÍVEIS =======]
-            Escolha de acordo com as opções`);
-        array.forEach((prod,i) => {
+        [====== ITENS DISPONÍVEIS =======]
+        Escolha de acordo com as opções`);
+        arrayEstoque.forEach((prod,i) => {
             console.log(`
             [${i+1}] ${prod.nome} -> R$${prod.preco} und`);
         });
         console.log(`
-            [====== ITENS DISPONÍVEIS =======]\n`);
+        [====== ITENS DISPONÍVEIS =======]`);
+        carrinho = montarCarrinho(arrayEstoque,carrinho)
+        decision = Number(prompt('(Escolha: [1] Adicionar mais | [2] Finalizar) --> '))
+        
+    }while(decision !== 2)
+        
+        return carrinho
+    }
+    
+    // montando o carrinho 
+const montarCarrinho = (array,carrinho) => {
+        let total = 0
         let selecionado = Number(prompt('Selecione -> '))
         let unidades = Number(prompt('Unidade(s) -> '))
         let existe = carrinho.findIndex((prod,i) => prod.nome === array[selecionado-1].nome)
@@ -126,41 +139,65 @@ export const vendas = (array) =>{
             let novoProd = new item(array[selecionado-1].nome, unidades, array[selecionado-1].preco)
             carrinho.push(novoProd)
         }
-    
+    console.clear()
         console.log(`
             [--------- NOTA FISCAL ---------]`);
-        carrinho.forEach(produto => {  
-            console.log(`
-                Produto -> ${produto.nome}
-                Preço -> R$${(produto.preco * produto.qtde).toFixed(2)}`);
-            
+    carrinho.forEach(produto => {  
+        console.log(`
+            Produto -> ${produto.nome}
+            Preço -> R$${(produto.preco * produto.qtde).toFixed(2)}`);
+            total += produto.preco * produto.qtde
         });
         console.log(`
-            Escolha: [1] Adicionar mais | [2] Finalizar`);
-        decision = Number(prompt('--> '))
-        if(decision === 2){
-            decision = false
-        }
-    } while (decision === 1);
+            [---- TOTAL A PAGAR = R$${total.toFixed(2)} ----]\n\n`);
     return carrinho
 }
-// atualizar estoque 
+
+// atualizando o estoque
 export const atualizarEstoq = (arrayEstoq, arrayCarrinho) => {
     arrayCarrinho.forEach(itemCar => {
+        arrayEstoq.forEach(estoqItem => {
+            if(estoqItem.nome === itemCar.nome){
+                estoqItem.qtde -= itemCar.qtde
+            }
+        });
     });
     return arrayEstoq
 }
 
+
+
+
+
 // gerando relatório
-export const relatorio = (arrayCarrinho, arrayEstoque) => {
-    let relatorio = []
-    arrayEstoque.forEach(prodEstoq => {
-        carrinho.forEach(itemCarrinho => {
-            if(prodEstoq.nome === itemCarrinho.nome){
-                let compra = `Produto -> ${itemCarrinho.nome} || Vendido = ${itemCarrinho.qtde} (R$${itemCarrinho.preco * itemCarrinho.qtde})`
-                relatorio.push(compra)
-            }
-        });   
+export const gerarRelatorio = (arrayCarrinho, relatorio) => {
+    
+    let arrayComandas = []
+    let venda
+    arrayCarrinho.forEach((prod, i) => {
+        venda = new item(prod.nome, prod.qtde, prod.preco)
+        arrayComandas.push(venda)
     });
+    relatorio.push(arrayComandas)
     return relatorio
+}
+
+// imprimir relatório
+export const imprimir = (relatorio) => {
+    console.log(`
+        [=============== RELATÓRIO GERAL ===============]\n`);
+    for(let i = 0; i < relatorio.length; i++){
+        let total = 0
+        console.log(`
+            [----------------- ${i+1} VENDA -----------------]`);
+        relatorio[i].forEach((venda, j) => {
+            console.log(`
+                [${j+1}] ${venda.nome} -> x${venda.qtde} vendidos (R$${venda.preco * venda.qtde})`);
+            total += venda.preco * venda.qtde
+        });
+        console.log(`
+            [--------------- LUCRO = R$${total.toFixed(2)} ---------------]\n`);
+    }    
+        console.log(`
+            [=============== RELATÓRIO GERAL ===============]`);  
 }
