@@ -6,7 +6,7 @@ class item{
     constructor(nome,qtde, preco){
         this.nome = nome
         this.qtde = qtde
-        this.preco = preco.toFixed(2)
+        this.preco = Number(preco).toFixed(2)
     }
 }
 export function add(array){ console.clear()
@@ -104,6 +104,7 @@ export function remover(array){
 // gerar venda
 
 export const vendas = (array) =>{
+    let carrinho = []
     let decision = 1
     do {
         console.log(`
@@ -117,37 +118,49 @@ export const vendas = (array) =>{
             [====== ITENS DISPONÍVEIS =======]\n`);
         let selecionado = Number(prompt('Selecione -> '))
         let unidades = Number(prompt('Unidade(s) -> '))
-        let carrinho = []
         let existe = carrinho.findIndex((prod,i) => prod.nome === array[selecionado-1].nome)
         if(existe != -1){
-            carrinho[existe].qtde += unidades
+            carrinho[existe].qtde += unidades           
         }
         else{
-            array[selecionado-1].qtde = unidades
-            carrinhJo.push(array[selecionado-1])
+            let novoProd = new item(array[selecionado-1].nome, unidades, array[selecionado-1].preco)
+            carrinho.push(novoProd)
         }
     
         console.log(`
             [--------- NOTA FISCAL ---------]`);
-        carrinho.forEach(produto => {
-            
+        carrinho.forEach(produto => {  
             console.log(`
                 Produto -> ${produto.nome}
                 Preço -> R$${(produto.preco * produto.qtde).toFixed(2)}`);
+            
         });
         console.log(`
             Escolha: [1] Adicionar mais | [2] Finalizar`);
         decision = Number(prompt('--> '))
         if(decision === 2){
-            array.forEach(produto => {
-                carrinho.forEach(carrinhoItem => {
-                    if(carrinhoItem.nome === produto.nome){
-                        produto.qtde -= carrinhoItem.qtde
-                    }
-                });
-            });
             decision = false
         }
     } while (decision === 1);
-    return array
+    return carrinho
+}
+// atualizar estoque 
+export const atualizarEstoq = (arrayEstoq, arrayCarrinho) => {
+    arrayCarrinho.forEach(itemCar => {
+    });
+    return arrayEstoq
+}
+
+// gerando relatório
+export const relatorio = (arrayCarrinho, arrayEstoque) => {
+    let relatorio = []
+    arrayEstoque.forEach(prodEstoq => {
+        carrinho.forEach(itemCarrinho => {
+            if(prodEstoq.nome === itemCarrinho.nome){
+                let compra = `Produto -> ${itemCarrinho.nome} || Vendido = ${itemCarrinho.qtde} (R$${itemCarrinho.preco * itemCarrinho.qtde})`
+                relatorio.push(compra)
+            }
+        });   
+    });
+    return relatorio
 }
