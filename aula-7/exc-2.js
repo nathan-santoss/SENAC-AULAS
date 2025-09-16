@@ -1,5 +1,6 @@
 import promptSync from 'prompt-sync'
 const prompt = promptSync()
+import {nomedaFUNCAO} from './NomedoarquivoFUNCAO'
 
 let flag = true
 let saldo = 0
@@ -32,7 +33,7 @@ do{
             valor = Number(prompt('Informe o valor do DEPÓSITO em REAIS -> '))
             saldo = depositar(valor,saldo)
             console.clear()
-            console.log(`Seu saldo atual é = R$${saldo.toFixed(2)}`);
+            console.log(`\nSeu saldo atual é = R$${saldo.toFixed(2)}`);
             break
         case 3:
             flag = false
@@ -42,6 +43,3 @@ do{
             break
     }
 }while(flag)
-
-
-
