@@ -1,5 +1,4 @@
-import promptSync from 'prompt-sync'
-const prompt = promptSync()
+
 
 export const sortear = (max, min) => {
    return Math.floor(Math.random() * (max - min) + min)
