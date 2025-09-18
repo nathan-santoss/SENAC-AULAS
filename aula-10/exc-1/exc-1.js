@@ -1,8 +1,8 @@
 import promptSync from 'prompt-sync'
 const prompt = promptSync()
-import { consultar } from './function.js'
+import { alterar, consultar } from './function.js'
 
-const pratos = [
+let pratos = [
     ['FECHADO'], // segunda
     ['FECHADO'], // terça
     [
@@ -37,7 +37,8 @@ let option
 do{
     console.log(`
         [===== MENU =====]
-        [1] - Consultar cardápio
+        [1] - Consultar cardápio;
+        [2] - Remover ou Alterar
         [0] - Sair`);
     option = Number(prompt('Selecione -> '))
     console.clear()
@@ -58,6 +59,9 @@ do{
             console.clear()
             flag = consultar(dia, pratos,flag)
         }while(flag !== false)
+    }
+    if(option === 2){
+        pratos = alterar(pratos)
     }
 
 }while(option !== 0)

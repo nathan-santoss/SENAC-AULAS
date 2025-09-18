@@ -67,3 +67,32 @@ const mostrarPrato = (dia, arrayPratos) => {
             break
     }
 }
+
+export const alterar = (arrayPratos) => {
+    console.log(`
+        Informe o dia da semana:
+        [FECHADO] Segunda;
+        [FECHADO] Terça;
+        [2] Quarta;
+        [3] Quinta;
+        [4] Sexta;
+        [5] Sábado;
+        [6] Domingo;
+        [0] Voltar`);
+    let dia = Number(prompt('--> '))
+    let selecao = Number(prompt('[1] Substituir || [2] Remover'))
+    let refeicao = Number(prompt('Refeição => [1] Café || [2] Almoço || [3] Jantar  --> '))
+    
+    switch(selecao){
+        case 1:
+            let novoPrato = prompt('Informe um novo prato -> ')
+            arrayPratos[dia][refeicao-1] = novoPrato
+            // return arrayPratos
+            break
+        case 2:
+            arrayPratos[dia][refeicao-1] = '[--- PRATO VAGO ---]'
+            // return arrayPratos
+            break
+    }
+    return arrayPratos
+}
