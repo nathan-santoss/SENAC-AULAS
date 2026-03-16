@@ -1,68 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <title>Salvador - Contato</title>
+</head>
+<body style="font-family: verdana;">
+    <h1>Descubra Salvador</h1>
+    <hr>
+    <fieldset>
+        <legend>Fale Conosco (Dúvidas/Sugestões)</legend>
+        <form action="#" method="post">
+            <label for="nome">Nome Completo:</label><br>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br><br>
 
-	<head>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required><br><br>
 
-		<title>Salvador - Bahia</title>
+            <label for="tel">Telefone:</label><br>
+            <input type="tel" id="tel" name="tel" placeholder="55 (71) 99999-9999"><br><br>
 
-	</head>
+            <label for="assunto">Assunto:</label><br>
+            <select id="assunto" name="assunto">
+                <option>Informações Turísticas</option>
+                <option>Eventos (Carnaval)</option>
+                <option>Hospedagem</option>
+                <option selected>Outros</option>
+            </select><br><br>
 
-	<body>
+            <label for="msg">Mensagem:</label><br>
+            <textarea id="msg" name="message" rows="5" cols="30" placeholder="Digite aqui sua mensagem"></textarea><br><br>
 
-		<h1>Salvador - Bahia</h1>
-
-		<h2>Imagem da cidade</h2>
-
-		<figure>
-
-			<img
-				src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Salvador_Bahia_Brazil.jpg"
-				alt="Cidade de Salvador"
-				width="500"
-			>
-
-			<figcaption>
-				Vista da cidade de Salvador
-			</figcaption>
-
-		</figure>
-
-		<hr>
-
-		<h2>Vídeo sobre Salvador</h2>
-
-		<iframe
-			width="500"
-			height="300"
-			src="https://www.youtube.com/embed/0n6g4H4nQwY"
-			title="Vídeo sobre Salvador"
-			frameborder="0"
-			allowfullscreen>
-		</iframe>
-
-		<hr>
-
-		<h2>Música da região</h2>
-
-		<audio controls>
-
-			<source
-				src="https://upload.wikimedia.org/wikipedia/commons/4/45/Axe_music_sample.ogg"
-				type="audio/ogg"
-			>
-
-		</audio>
-
-		<hr>
-
-		<h2>Localização</h2>
-
-		<iframe
-			src="https://www.google.com/maps?q=salvador&output=embed"
-			width="500"
-			height="300">
-		</iframe>
-
-	</body>
-
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </fieldset>
+</body>
 </html>
