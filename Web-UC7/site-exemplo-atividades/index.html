@@ -2,90 +2,143 @@
 <html>
 
 <head>
+    <title>Salvador - Bahia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informações sobre a cidade de Salvador na Bahia">
+    <meta name="author" content="Nathan">
+    <meta http-equiv="refresh" content="30">
+    <style>
+        .corpo-principal {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
 
-<title>Salvador - Bahia</title>
+        .titulo-principal {
+            color: #333;
+            text-align: center;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px #ccc;
+        }
 
-<meta charset="UTF-8">
+        .linha-divisoria {
+            border: 1px solid #999;
+            margin: 20px 0;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        .subtitulo-secao {
+            color: #000;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
 
-<meta name="description" content="Informações sobre a cidade de Salvador na Bahia">
+        .texto-paragrafo {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #444;
+        }
 
-<meta name="author" content="Nathan">
+        .texto-em-destaque {
+            color: #d32f2f;
+            font-weight: bold;
+        }
 
-<meta http-equiv="refresh" content="30">
+        .lista-navegacao {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
 
+        .item-navegacao {
+            margin-bottom: 10px;
+        }
+
+        .link-site {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .bloco-figura {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .foto-salvador {
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+            width: 400px;
+        }
+
+        .legenda-foto {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .video-salvador {
+            border: 3px solid #ccc;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .bloco-audio {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 
-<body>
-
-<h1>Salvador - Bahia</h1>
-
-<hr>
-
-<h2>História</h2>
-
-<p>
-Salvador é a capital do estado da Bahia e foi a primeira capital do Brasil.
-A cidade foi fundada em <strong>1549</strong> e possui uma das culturas mais ricas do país.
-</p>
-
-<p>
-A cidade é conhecida por sua forte influência africana,
-sua culinária típica e sua música.
-</p>
-
-<hr>
-
-<h2>Informações sobre Salvador</h2>
-
-<ul>
-
-<li><a href="pontos.html">Pontos Turísticos</a></li>
-
-<li><a href="comidas.html">Comidas Regionais</a></li>
-
-<li><a href="musicas.html">Músicas da Cultura Baiana</a></li>
-
-<li><a href="contato.html">Contato</a></li>
-
-</ul>
-
-<hr>
-
-<h2>Imagem de Salvador</h2>
-
-<figure>
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo2V749GKMK966oZWv03iJ1AzkIivIcK-Q9g&s"
-alt="Pelourinho Salvador"
-width="400">
-
-<figcaption>Pelourinho - Centro Histórico de Salvador</figcaption>
-
-</figure>
-
-<hr>
-
-<h2>Vídeo sobre Salvador</h2>
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/Fm0Yxcyyh2I"
-title="Salvador"
-allowfullscreen>
-</iframe>
-
-<hr>
-
-<h2>Música da Cultura Baiana</h2>
-
-<p>Música Pequena Eva - Banda Eva</p>
-
-<audio controls>
-
-<source src="pequena-eva.mp3" type="audio/mpeg">
-
-</audio>
-
+<body class="corpo-principal">
+    <h1 class="titulo-principal">Salvador - Bahia</h1>
+    <hr class="linha-divisoria">
+    <h2 class="subtitulo-secao">História</h2>
+    <p class="texto-paragrafo">
+        Salvador é a capital do estado da Bahia e foi a primeira capital do Brasil.
+        A cidade foi fundada em <strong class="texto-em-destaque">1549</strong> e possui uma das culturas mais ricas do
+        país.
+    </p>
+    <p class="texto-paragrafo">
+        A cidade é conhecida por sua forte influência africana,
+        sua culinária típica e sua música.
+    </p>
+    <hr class="linha-divisoria">
+    <h2 class="subtitulo-secao">Informações sobre Salvador</h2>
+    <ul class="lista-navegacao">
+        <li class="item-navegacao"><a class="link-site" href="pontos.html">Pontos Turísticos</a></li>
+        <li class="item-navegacao"><a class="link-site" href="comidas.html">Comidas Regionais</a></li>
+        <li class="item-navegacao"><a class="link-site" href="musicas.html">Músicas da Cultura Baiana</a></li>
+        <li class="item-navegacao"><a class="link-site" href="contato.html">Contato</a></li>
+    </ul>
+    <hr class="linha-divisoria">
+    <h2 class="subtitulo-secao">Imagem de Salvador</h2>
+    <figure class="bloco-figura">
+        <img class="foto-salvador"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo2V749GKMK966oZWv03iJ1AzkIivIcK-Q9g&s"
+            alt="Pelourinho Salvador" width="400">
+        <figcaption class="legenda-foto">Pelourinho - Centro Histórico de Salvador</figcaption>
+    </figure>
+    <hr class="linha-divisoria">
+    <h2 class="subtitulo-secao">Vídeo sobre Salvador</h2>
+    <iframe class="video-salvador" width="560" height="315" src="https://www.youtube.com/embed/Fm0Yxcyyh2I"
+        title="Salvador" allowfullscreen>
+    </iframe>
+    <hr class="linha-divisoria">
+    <h2 class="subtitulo-secao">Música da Cultura Baiana</h2>
+    <p class="texto-paragrafo">Música Pequena Eva - Banda Eva</p>
+    <audio class="bloco-audio" controls>
+        <source src="pequena-eva.mp3" type="audio/mpeg">
+    </audio>
 </body>
+
 </html>

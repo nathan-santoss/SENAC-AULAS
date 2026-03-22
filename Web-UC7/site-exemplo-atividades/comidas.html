@@ -2,33 +2,60 @@
 <html>
 
 <head>
+    <title>Comidas Típicas</title>
+    <meta charset="UTF-8">
+    <style>
+        .corpo-comidas {
+            background-color: #fffaf0;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
 
-<title>Comidas Típicas</title>
+        .titulo-comidas {
+            color: #e65100;
+            text-align: center;
+            font-size: 2.2rem;
+            text-decoration: underline;
+            margin-bottom: 30px;
+        }
 
-<meta charset="UTF-8">
+        .lista-ordenada {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px dashed #e65100;
+            border-radius: 15px;
+        }
 
+        .item-comida {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #3e2723;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .link-retorno {
+            color: #e65100;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
-<body>
-
-<h1>Comidas Regionais da Bahia</h1>
-
-<ol>
-
-<li>Acarajé</li>
-
-<li>Vatapá</li>
-
-<li>Caruru</li>
-
-<li>Moqueca Baiana</li>
-
-<li>Bobó de Camarão</li>
-
-</ol>
-
-<a href="index.html">Voltar</a>
-
+<body class="corpo-comidas">
+    <h1 class="titulo-comidas">Comidas Regionais da Bahia</h1>
+    <ol class="lista-ordenada">
+        <li class="item-comida">Acarajé</li>
+        <li class="item-comida">Vatapá</li>
+        <li class="item-comida">Caruru</li>
+        <li class="item-comida">Moqueca Baiana</li>
+        <li class="item-comida">Bobó de Camarão</li>
+    </ol>
+    <a class="link-retorno" href="index.html">Voltar</a>
 </body>
 
 </html>

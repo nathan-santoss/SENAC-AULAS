@@ -2,67 +2,91 @@
 <html>
 
 <head>
+    <title>Pontos Turísticos</title>
+    <meta charset="UTF-8">
+    <style>
+        .corpo-pontos {
+            background-color: #e8f5e9;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
 
-<title>Pontos Turísticos</title>
+        .titulo-pontos {
+            color: #1b5e20;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
 
-<meta charset="UTF-8">
+        .tabela-turismo {
+            width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 2px solid #1b5e20;
+        }
 
+        .titulo-tabela {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2e7d32;
+            padding-bottom: 10px;
+        }
+
+        .linha-tabela {
+            border-bottom: 1px solid #c8e6c9;
+        }
+
+        .cabecalho-tabela {
+            background-color: #2e7d32;
+            color: #fff;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .celula-tabela {
+            padding: 12px;
+            color: #333;
+            text-align: left;
+            border: 1px solid #c8e6c9;
+        }
+
+        .link-retorno {
+            color: #1b5e20;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 25px;
+        }
+    </style>
 </head>
 
-<body>
-
-<h1>Pontos Turísticos de Salvador</h1>
-
-<table border="1" cellpadding="10">
-
-<caption>Principais pontos turísticos</caption>
-
-<tr>
-
-<th>Local</th>
-
-<th>Descrição</th>
-
-</tr>
-
-<tr>
-
-<td>Pelourinho</td>
-
-<td>Centro histórico famoso pelas casas coloridas</td>
-
-</tr>
-
-<tr>
-
-<td>Elevador Lacerda</td>
-
-<td>Conecta cidade alta e cidade baixa</td>
-
-</tr>
-
-<tr>
-
-<td>Farol da Barra</td>
-
-<td>Um dos cartões postais da cidade</td>
-
-</tr>
-
-<tr>
-
-<td>Mercado Modelo</td>
-
-<td>Centro tradicional de artesanato</td>
-
-</tr>
-
-</table>
-
-<br>
-
-<a href="index.html">Voltar</a>
-
+<body class="corpo-pontos">
+    <h1 class="titulo-pontos">Pontos Turísticos de Salvador</h1>
+    <table class="tabela-turismo" border="1" cellpadding="10">
+        <caption class="titulo-tabela">Principais pontos turísticos</caption>
+        <tr class="linha-tabela">
+            <th class="cabecalho-tabela">Local</th>
+            <th class="cabecalho-tabela">Descrição</th>
+        </tr>
+        <tr class="linha-tabela">
+            <td class="celula-tabela">Pelourinho</td>
+            <td class="celula-tabela">Centro histórico famoso pelas casas coloridas</td>
+        </tr>
+        <tr class="linha-tabela">
+            <td class="celula-tabela">Elevador Lacerda</td>
+            <td class="celula-tabela">Conecta cidade alta e cidade baixa</td>
+        </tr>
+        <tr class="linha-tabela">
+            <td class="celula-tabela">Farol da Barra</td>
+            <td class="celula-tabela">Um dos cartões postais da cidade</td>
+        </tr>
+        <tr class="linha-tabela">
+            <td class="celula-tabela">Mercado Modelo</td>
+            <td class="celula-tabela">Centro tradicional de artesanato</td>
+        </tr>
+    </table>
+    <br>
+    <a class="link-retorno" href="index.html">Voltar</a>
 </body>
 
 </html>
