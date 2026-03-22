@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac Potiguar - Unidade Acadêmica</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 80px;
+        }
+
+        .topo-instituicao {
+            background-color: #004a8d;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .topo-instituicao h1 {
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+
+        .menu-principal ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-principal li {
+            margin: 0 15px;
+        }
+
+        .menu-principal a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .corpo-conteudo {
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .secao-informativa {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .titulo-centralizado {
+            text-align: center;
+            color: #004a8d;
+        }
+
+        .texto-justificado {
+            text-align: justify;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .formulario-inscricao {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .entrada-texto {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .botao-enviar {
+            padding: 12px 25px;
+            border-radius: 8px;
+            background-color: #ff9900;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .base-pagina {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #004a8d;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="topo-instituicao">
+        <h1>Senac Potiguar</h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Unidades</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="corpo-conteudo">
+        <section class="secao-informativa">
+            <h2 class="titulo-centralizado">Excelência em Educação Profissional</h2>
+            <p class="texto-justificado">
+                O Senac Potiguar é referência na formação de profissionais para o mercado de trabalho 
+                no Rio Grande do Norte. Com uma metodologia focada na prática e laboratórios de última 
+                geração, preparamos nossos alunos para os desafios reais da carreira de tecnologia.
+            </p>
+        </section>
+
+        <section class="secao-informativa">
+            <h3 class="titulo-centralizado">Interesse em Cursos</h3>
+            <form class="formulario-inscricao">
+                <label for="nome-aluno">Nome do Candidato:</label>
+                <input type="text" id="nome-aluno" class="entrada-texto" placeholder="Digite seu nome completo">
+                
+                <label for="curso-interesse">Curso de Interesse:</label>
+                <select id="curso-interesse" class="entrada-texto">
+                    <option>Desenvolvimento de Sistemas</option>
+                    <option>Redes de Computadores</option>
+                    <option>Informática para Internet</option>
+                </select>
+
+                <button type="submit" class="botao-enviar">Solicitar Informações</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="base-pagina">
+        <p>Senac Potiguar &copy; 2024 - Transformando Vidas através da Educação.</p>
+    </footer>
+
+</body>
+</html>
