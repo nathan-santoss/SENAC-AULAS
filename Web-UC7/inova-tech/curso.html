@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,9 @@
             min-height: 100vh;
         }
 
-        *:is(h1, h2, td)::selection {
+        h1::selection,
+        h2::selection,
+        td::selection {
             background-color: #ff9900;
             color: #004a8d;
         }
@@ -79,6 +81,17 @@
             min-width: 300px;
         }
 
+        .titulo-curso {
+            color: #004a8d;
+            margin-bottom: 15px;
+        }
+
+        .subtitulo {
+            color: #004a8d;
+            border-bottom: 2px solid #ff9900;
+            padding-bottom: 10px;
+        }
+
         .tabela-grade {
             width: 100%;
             border-collapse: collapse;
@@ -95,6 +108,10 @@
         .tabela-grade td {
             border: 1px solid #dddddd;
             padding: 12px;
+        }
+
+        .tabela-grade tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
 
         .rodape-institucional {
@@ -122,17 +139,17 @@
     </header>
 
     <main class="container-curso">
-        <div class="conteudo-curso">
-            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600" alt="Curso"
-                class="imagem-curso">
+        <section class="conteudo-curso">
+            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600"
+                alt="Curso de Desenvolvimento de Sistemas" class="imagem-curso">
             <div class="descricao-curso">
-                <h1 style="color: #004a8d; margin-bottom: 15px;">Desenvolvimento de Sistemas</h1>
+                <h1 class="titulo-curso">Desenvolvimento de Sistemas</h1>
                 <p>Formação prática voltada para o mercado, abrangendo lógica, front-end moderno e arquitetura de
                     software.</p>
             </div>
-        </div>
+        </section>
 
-        <h2 style="color: #004a8d; border-bottom: 2px solid #ff9900; padding-bottom: 10px;">Grade Curricular</h2>
+        <h2 class="subtitulo">Grade Curricular</h2>
         <table class="tabela-grade">
             <thead>
                 <tr>
@@ -147,7 +164,7 @@
                     <td>Lógica de Programação</td>
                     <td>100h</td>
                 </tr>
-                <tr style="background-color: #f9f9f9;">
+                <tr>
                     <td>I</td>
                     <td>HTML5 e CSS3</td>
                     <td>80h</td>
@@ -157,7 +174,7 @@
                     <td>Banco de Dados</td>
                     <td>100h</td>
                 </tr>
-                <tr style="background-color: #f9f9f9;">
+                <tr>
                     <td>II</td>
                     <td>JavaScript para Web</td>
                     <td>120h</td>
