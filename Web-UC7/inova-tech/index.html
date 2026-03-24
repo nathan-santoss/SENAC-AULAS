@@ -1,257 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InovaTech - Centro de Capacitação</title>
+    <title>Inova Tech - Início</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
-            padding-top: 80px;
-            padding-bottom: 60px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .cabecalho-fixo {
-            position: fixed;
+        *:is(h1, h2, h3, p, span, li, td)::selection {
+            background-color: #ff9900;
+            color: #004a8d;
+        }
+
+        .cabecalho-principal {
+            background-color: #004a8d;
+            color: #ffffff;
+            padding: 0.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
             top: 0;
-            width: 100%;
-            height: 80px;
-            background-color: #ffffff;
-            border-bottom: 2px solid #ddd;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logotipo-container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 0 5%;
-            z-index: 1000;
+            text-decoration: none;
         }
 
-        .menu-navegacao ul {
+        .logotipo-imagem {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+
+        .navegacao-lista {
             display: flex;
             list-style: none;
             gap: 20px;
         }
 
-        .menu-navegacao a {
+        .navegacao-item {
+            color: #ffffff;
             text-decoration: none;
-            color: #333;
             font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
         }
 
-        .conteudo-principal {
+        .navegacao-item:hover {
+            color: #ff9900;
+        }
+
+        .container-conteudo {
+            flex: 1;
+            width: 90%;
             max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-        }
-
-        .secao-apresentacao video {
-            width: 100%;
-            height: auto;
+            margin: 2rem auto;
+            background: #ffffff;
+            padding: 2rem;
             border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .secao-localizacao iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-            margin-top: 20px;
+        .secao-boas-vindas {
+            text-align: center;
+            padding: 2rem 0;
         }
 
-        .container-depoimentos {
-            height: 200px;
-            overflow-y: scroll;
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-top: 20px;
-            background-color: #fafafa;
+        .secao-boas-vindas h1 {
+            color: #004a8d;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
         }
 
-        .item-depoimento {
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px dashed #ddd;
+        .secao-boas-vindas p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .container-formularios {
+        .grade-botoes {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 3rem;
         }
 
-        fieldset {
-            padding: 20px;
-            border: 2px solid #0056b3;
+        .cartao-link {
+            border: 2px solid #004a8d;
+            padding: 2.5rem;
+            text-align: center;
             border-radius: 8px;
-        }
-
-        legend {
-            font-weight: bold;
-            color: #0056b3;
-            padding: 0 10px;
-        }
-
-        .campo-entrada {
-            display: block;
-            width: 100%;
-            margin-bottom: 15px;
-        }
-
-        .campo-entrada label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .campo-entrada input, 
-        .campo-entrada select, 
-        .campo-entrada textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .area-mensagem {
-            height: 100px;
-            overflow: auto;
-        }
-
-        .botao-acao {
-            padding: 10px 20px;
-            background-color: #0056b3;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .botao-limpar {
-            padding: 10px 20px;
-            background-color: #ccc;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .rodape-estatico {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 60px;
-            background-color: #333;
-            color: #fff;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #004a8d;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+        }
+
+        .cartao-link h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cartao-link p {
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        .cartao-link:hover {
+            background-color: #004a8d;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 74, 141, 0.2);
+        }
+
+        .cartao-link:hover p {
+            color: #f4f4f4;
+        }
+
+        .rodape-institucional {
+            background-color: #004a8d;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
             font-size: 0.9rem;
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            .grade-botoes {
+                grid-template-columns: 1fr;
+            }
+
+            .cabecalho-principal {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .navegacao-lista {
+                margin-top: 1rem;
+                gap: 10px;
+            }
+
+            .logotipo-imagem {
+                height: 50px;
+            }
         }
     </style>
 </head>
-<body>
 
-    <header class="cabecalho-fixo">
-        <nav class="menu-navegacao">
-            <ul>
-                <li><a href="#cursos">Área de Cursos</a></li>
-                <li><a href="#secretaria">Secretaria Virtual</a></li>
+<body>
+    <header class="cabecalho-principal">
+        <a href="index.html" class="logotipo-container">
+            <img src="logo-instituicao.jpg" alt="Logotipo Inova Tech" class="logotipo-imagem">
+        </a>
+        <nav>
+            <ul class="navegacao-lista">
+                <li><a href="index.html" class="navegacao-item">Início</a></li>
+                <li><a href="curso.html" class="navegacao-item">Cursos</a></li>
+                <li><a href="secretaria.html" class="navegacao-item">Secretaria</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="conteudo-principal">
-        <section class="secao-apresentacao">
-            <h2>Bem-vindo à InovaTech</h2>
+    <main class="container-conteudo">
+        <section class="secao-boas-vindas">
+            <h1>Bem-vindo à Inova Tech</h1>
+            <p>A Inova Tech une a tradição em ensino profissional com a inovação tecnológica. Nosso compromisso é
+                transformar vidas através da educação de alta qualidade, preparando você para os desafios do mercado de
+                trabalho moderno conforme as metodologias de excelência.</p>
         </section>
 
-        <section class="secao-localizacao">
-            <h3>Nossa Localização</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=exemplo"></iframe>
-        </section>
-
-        <section class="secao-depoimentos">
-            <h3>Depoimentos</h3>
-            <div class="container-depoimentos">
-                <article class="item-depoimento">
-                    <strong>João Silva (Estudante):</strong>
-                    <p>O curso de TI mudou minha carreira profissional!</p>
-                </article>
-                <article class="item-depoimento">
-                    <strong>Maria Souza (Profissional):</strong>
-                    <p>Excelente infraestrutura e professores qualificados.</p>
-                </article>
-                <article class="item-depoimento">
-                    <strong>Carlos Lima (Ex-aluno):</strong>
-                    <p>Consegui meu primeiro emprego logo após a certificação.</p>
-                </article>
-            </div>
-        </section>
-
-        <div class="container-formularios">
-            <section id="contato">
-                <form action="#" method="post">
-                    <fieldset>
-                        <legend>Fale Conosco</legend>
-                        <div class="campo-entrada">
-                            <label for="nome-contato">Nome:</label>
-                            <input type="text" id="nome-contato" name="nome" required>
-                        </div>
-                        <div class="campo-entrada">
-                            <label for="email-contato">E-mail:</label>
-                            <input type="email" id="email-contato" name="email" required>
-                        </div>
-                        <div class="campo-entrada">
-                            <label for="assunto">Assunto:</label>
-                            <input type="text" id="assunto" name="assunto">
-                        </div>
-                        <div class="campo-entrada">
-                            <label for="mensagem">Mensagem:</label>
-                            <textarea id="mensagem" name="mensagem" class="area-mensagem"></textarea>
-                        </div>
-                        <button type="submit" class="botao-acao">Enviar</button>
-                        <button type="reset" class="botao-limpar">Limpar</button>
-                    </fieldset>
-                </form>
-            </section>
-
-            <section id="matricula">
-                <form action="#" method="post" enctype="multipart/form-data">
-                    <fieldset>
-                        <legend>Matrícula Online</legend>
-                        <div class="campo-entrada">
-                            <label for="nome-aluno">Nome Completo:</label>
-                            <input type="text" id="nome-aluno" name="nome_aluno" required>
-                        </div>
-                        <div class="campo-entrada">
-                            <label for="cpf">CPF:</label>
-                            <input type="text" id="cpf" name="cpf" maxlength="11" required>
-                        </div>
-                        <div class="campo-entrada">
-                            <label for="cidade">Cidade:</label>
-                            <input list="lista-cidades" id="cidade" name="cidade">
-                            <datalist id="lista-cidades">
-                                <option value="Natal">
-                                <option value="Mossoró">
-                                <option value="Parnamirim">
-                            </datalist>
-                        </div>
-                        <button type="submit" class="botao-acao">Matricular</button>
-                    </fieldset>
-                </form>
-            </section>
+        <div class="grade-botoes">
+            <a href="curso.html" class="cartao-link">
+                <h2>Ver Cursos</h2>
+                <p>Explore nossa grade curricular completa.</p>
+            </a>
+            <a href="secretaria.html" class="cartao-link">
+                <h2>Secretaria</h2>
+                <p>Acesse serviços e documentos online.</p>
+            </a>
         </div>
     </main>
 
-    <footer class="rodape-estatico">
-        <p>&copy; 2024 Inova Tech - Todos os direitos reservados. Siga-nos nas redes sociais.</p>
+    <footer class="rodape-institucional">
+        <p>© 2024 Inova Tech - Excelência em Educação Profissional</p>
     </footer>
-
 </body>
+
 </html>

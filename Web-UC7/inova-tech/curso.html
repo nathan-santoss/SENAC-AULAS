@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inova Tech - Curso</title>
+    <style>
+        :root {
+            --primary: #004a8d;
+            --secondary: #ff9900;
+            --light: #f4f4f4;
+            --white: #ffffff;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        *:is(h1, h2, h3, p, span, li, td)::selection {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        .cabecalho {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .nav-lista {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            flex: 1;
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .curso-header {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .img-curso {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #ddd;
+        }
+
+        .tabela-grade {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .tabela-grade th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .tabela-grade td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        .tabela-grade tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .rodape {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">Inova Tech</div>
+        <nav>
+            <ul class="nav-lista">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="cursos.html" class="nav-link">Cursos</a></li>
+                <li><a href="secretaria.html" class="nav-link">Secretaria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="curso-header">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Curso Web"
+                class="img-curso">
+            <div>
+                <h1 style="color: var(--primary)">Desenvolvimento de Sistemas</h1>
+                <p style="margin-top: 10px; text-align: justify;">O curso prepara profissionais para analisar, projetar,
+                    programar e testar sistemas computacionais, utilizando as tecnologias mais requisitadas pelo mercado
+                    de trabalho atual.</p>
+            </div>
+        </div>
+
+        <h2 style="color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 5px;">Grade
+            Curricular</h2>
+        <table class="tabela-grade">
+            <thead>
+                <tr>
+                    <th>Módulo</th>
+                    <th>Disciplina</th>
+                    <th>Carga Horária</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I</td>
+                    <td>Lógica de Programação e Algoritmos</td>
+                    <td>100h</td>
+                </tr>
+                <tr>
+                    <td>I</td>
+                    <td>Fundamentos de Web (HTML/CSS)</td>
+                    <td>80h</td>
+                </tr>
+                <tr>
+                    <td>II</td>
+                    <td>JavaScript Avançado</td>
+                    <td>120h</td>
+                </tr>
+                <tr>
+                    <td>II</td>
+                    <td>Bancos de Dados SQL</td>
+                    <td>100h</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="rodape">
+        <p>© 2024 Inova Tech - Todos os direitos reservados</p>
+    </footer>
+</body>
+
+</html>
