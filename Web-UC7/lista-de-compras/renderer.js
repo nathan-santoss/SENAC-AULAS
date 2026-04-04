@@ -37,5 +37,4 @@ const adicionar_produto = (produto) => {
     btn_finishItem.addEventListener('click', (event) => {
         new_item.style.textDecoration = 'line-through'
     })
-
 }
