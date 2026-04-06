@@ -35,6 +35,6 @@ const adicionar_produto = (produto) => {
 
     const btn_finishItem = new_item.querySelector('.btn-feito')
     btn_finishItem.addEventListener('click', (event) => {
-        new_item.style.textDecoration = 'line-through'
+        new_item.classList.toggle('item-comprado')
     })
 }
