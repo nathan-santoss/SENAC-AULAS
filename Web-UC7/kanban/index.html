@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kanban</title>
+    <script src="renderer.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <span>Nova Atividade: </span>
+        <input type="text" placeholder="Digite aqui" id="nova-tarefa">
+        <button id="add-bt">Adicionar</button>
+    </main>
+    <div id="kanban">
+        <div id="coluna-fazer">
+            <h2 id="titulo-fazer">A Fazer</h2>
+            <!-- <div id="tarefa-1"></div> -->
+        </div>
+
+        <div id="coluna-fazendo">
+            <h2 id="titulo-fazendo">Em Andamento</h2>
+            <!-- <div id="tarefa-3">Tarefa 3</div> -->
+        </div>
+
+        <div id="coluna-feito">
+            <h2 id="titulo-feito">Concluído</h2>
+            <!-- <div id="tarefa-4">Tarefa 4</div> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
