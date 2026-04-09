@@ -59,6 +59,9 @@ const move_task = (tarefa) => {
 }
 
 const editar_task = (tarefa) => {
-    // continua aqui
+    const divpai = tarefa.parentElement
+    if(divpai.id = 'coluna-fazendo'){
+        // continua aqui
+    }
 }
 
