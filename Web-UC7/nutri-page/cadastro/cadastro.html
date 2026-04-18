@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input,
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="renderer.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+        <h1>Cadastro</h1>
+        <form id="formCadastro">
+            <input id="nomeCadastro" type="text" placeholder="Nome" required>
+
+            <input id="emailCadastro" type="email" placeholder="E-mail" required>
+
+            <input id="senhaCadastro" type="password" placeholder="Senha" required>
+
+
+            <button id="botaoCadastro" type="submit">Cadastrar</button>
+        </form>
+        <div class="link">
+            <a href="../login/login.html">Voltar ao login</a>
+        </div>
+    </main>
+
+</body>
+
+</html>

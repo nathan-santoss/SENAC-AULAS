@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+        }
+
+        button {
+            grid-column: 1 / -1;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #27ae60;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background: #fff;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+        }
+
+        .acoes button {
+            margin: 2px;
+            padding: 5px 8px;
+            border: none;
+            cursor: pointer;
+            background: unset;
+        }
+
+        .acoes .editar {
+            background: #f1c40f;
+            color: black;
+        }
+
+        .acoes .editar:hover {
+            background: #d4ac0d;
+        }
+
+        .acoes .excluir {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .acoes .excluir:hover {
+            background: #c0392b;
+        }
+    </style>
+    <script src="renderer.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Painel do Nutricionista</h1>
+    </header>
+
+    <main>
+
+        <form id="formPaciente">
+            <input id="nome" type="text" placeholder="Nome" required>
+            <input id="dataNascimento" type="date" required>
+            <input id="email" type="email" placeholder="E-mail" required>
+            <input id="telefone" type="text" placeholder="Telefone">
+            <input id="endereco" type="text" placeholder="Endereço">
+            <input id="profissao" type="text" placeholder="Profissão">
+            <input id="altura" type="number" step="0.01" placeholder="Altura (m)" required>
+            <input id="peso" type="number" step="0.1" placeholder="Peso (kg)" required>
+
+            <button id="botaoCadastrar" type="submit">Cadastrar</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Nascimento</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Profissão</th>
+                    <th>Altura</th>
+                    <th>Peso</th>
+                    <th>IMC</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaPacientes">
+            </tbody>
+        </table>
+
+    </main>
+
+</body>
+
+</html>
