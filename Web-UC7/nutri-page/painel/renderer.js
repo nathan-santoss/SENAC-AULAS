@@ -63,3 +63,48 @@ function options(linha) {
         linha.remove()
     })
 }
+
+const bt_cep = document.getElementById('buscarCep')
+bt_cep.addEventListener('click', async () => {
+    const cep = document.getElementById('cep').value
+
+    try{
+        const endereco = await buscarCEP(cep)
+
+        document.getElementById('logradouro').value = endereco.logradouro
+        document.getElementById('bairro').value = endereco.bairro
+        document.getElementById('cidade').value = endereco.cidade
+        document.getElementById('estado').value = endereco.estado
+    }catch(erro){
+        alert(erro.message).toUpperCase()
+    }
+})
+
+
+
+
+
+async function buscarCEP(cep) {
+    cep = cep.replace(/\D/g, "")
+
+    if(cep.length !== 8){
+        throw new Error("CEP inválido")
+    }
+    const resultado = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    const dados = await resultado.json()
+
+    if(dados.erro){
+        throw new Error("CEP não encontrado")
+    }
+
+    const endereco = {
+        cep: dados.cep,
+        logradouro: dados.logradouro,
+        complemento: dados.complemento,
+        bairro: dados.bairro,
+        cidade: dados.localidade,
+        estado: (dados.uf).toUpperCase()
+    }
+    
+    return endereco
+}

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel</title>
+
     <style>
         body {
             margin: 0;
@@ -35,10 +36,10 @@
         input,
         button {
             padding: 10px;
+            font-size: 14px;
         }
 
         button {
-            grid-column: 1 / -1;
             background: #2ecc71;
             color: white;
             border: none;
@@ -47,6 +48,18 @@
 
         button:hover {
             background: #27ae60;
+        }
+
+        #buscarCep {
+            background: #3498db;
+        }
+
+        #buscarCep:hover {
+            background: #2980b9;
+        }
+
+        #botaoCadastrar {
+            grid-column: 1 / -1;
         }
 
         table {
@@ -73,7 +86,6 @@
             padding: 5px 8px;
             border: none;
             cursor: pointer;
-            background: unset;
         }
 
         .acoes .editar {
@@ -94,6 +106,7 @@
             background: #c0392b;
         }
     </style>
+
     <script src="renderer.js" defer></script>
 </head>
 
@@ -110,7 +123,16 @@
             <input id="dataNascimento" type="date" required>
             <input id="email" type="email" placeholder="E-mail" required>
             <input id="telefone" type="text" placeholder="Telefone">
-            <input id="endereco" type="text" placeholder="Endereço">
+
+            <input id="cep" type="text" placeholder="CEP">
+            <button type="button" id="buscarCep">Buscar CEP</button>
+
+            <input id="logradouro" type="text" placeholder="Logradouro">
+            <input id="numero" type="text" placeholder="Número">
+            <input id="bairro" type="text" placeholder="Bairro">
+            <input id="cidade" type="text" placeholder="Cidade">
+            <input id="estado" type="text" placeholder="Estado">
+
             <input id="profissao" type="text" placeholder="Profissão">
             <input id="altura" type="number" step="0.01" placeholder="Altura (m)" required>
             <input id="peso" type="number" step="0.1" placeholder="Peso (kg)" required>
@@ -133,8 +155,7 @@
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody id="tabelaPacientes">
-            </tbody>
+            <tbody id="tabelaPacientes"></tbody>
         </table>
 
     </main>
