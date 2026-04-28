@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem é esse personagem?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pagina">
+
+    <header class="cabecalho">
+        <h1 class="titulo">Quem é esse personagem?</h1>
+        <p class="subtitulo">Escolha a opção correta</p>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="jogo">
+
+            <article class="card">
+
+                <figure class="imagem-area">
+                    <img id="imagem-personagem" class="imagem" src="" alt="Personagem">
+                </figure>
+
+                <div class="opcoes" id="opcoes-personagens"></div>
+
+                <div class="acoes">
+                    <button id="botao-proximo" class="botao">Próximo</button>
+                </div>
+
+                <p id="mensagem" class="mensagem"></p>
+
+            </article>
+
+        </section>
+
+        <aside class="placar">
+
+            <div class="box">
+                <h2>Pontos</h2>
+                <p id="pontos" class="numero">0</p>
+            </div>
+
+            <div class="box">
+                <h2>Rodadas</h2>
+                <p id="rodadas" class="numero">0</p>
+            </div>
+
+        </aside>
+
+    </main>
+
+</body>
+
+<script src="renderer.js"></script>
+
+</html>

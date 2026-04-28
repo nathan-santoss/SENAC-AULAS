@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #2b2d42, #1a1b26);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    gap: 20px;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    font-size: 34px;
+}
+
+.subtitulo {
+    font-size: 15px;
+    color: #bdbdbd;
+    margin-top: 5px;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.jogo {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.imagem-area {
+    width: 180px;
+    height: 180px;
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.opcoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.opcao {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #3a3d5c;
+    color: #fff;
+    cursor: pointer;
+}
+
+.opcao:hover {
+    background: #5a5f8a;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.botao {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #6c5ce7;
+    color: white;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: #8c7bff;
+}
+
+.mensagem {
+    font-weight: bold;
+    font-size: 15px;
+    min-height: 20px;
+}
+
+.placar {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 15px 25px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 140px;
+}
+
+.numero {
+    font-size: 26px;
+    margin-top: 5px;
+    font-weight: bold;
+}
