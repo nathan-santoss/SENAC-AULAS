@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.cabecalho-principal {
+    background-color: #004a8d;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logotipo-imagem {
+    height: 60px;
+    display: block;
+}
+.navegacao-lista {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.navegacao-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.navegacao-item:hover {
+    color: #ff9900;
+}
+.conteudo-principal {
+    flex: 1;
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto;
+}
+.secao-matricula {
+    background-color: #ffffff;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 74, 141, 0.08);
+}
+.cabecalho-formulario {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.titulo-secao {
+    color: #004a8d;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.subtitulo-secao {
+    color: #555555;
+    font-size: 1.1em;
+}
+.grupo-campo {
+    margin-bottom: 20px;
+}
+.grupo-campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #004a8d;
+}
+.entrada-dado {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    font-size: 1em;
+    color: #333333;
+    transition: all 0.3s ease;
+}
+.entrada-dado:focus {
+    border-color: #004a8d;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 74, 141, 0.15);
+}
+.botao-enviar {
+    width: 100%;
+    background-color: #ff9900;
+    color: #ffffff;
+    border: none;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+.botao-enviar:hover {
+    background-color: #004a8d;
+}
+.rodape-institucional {
+    background-color: #004a8d;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin-top: auto;
+}

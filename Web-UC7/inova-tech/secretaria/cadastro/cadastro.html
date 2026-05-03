@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inova Tech - Cadastro de Aluno</title>
+    <link rel="stylesheet" href="/secretaria/cadastro/style.css">
+    <script src="/secretaria/cadastro/render.js" defer></script>
+</head>
+
+<body>
+    <header class="cabecalho-principal">
+        <a href="/">
+            <img src="/logo-instituicao.jpg" alt="Inova Tech" class="logotipo-imagem">
+        </a>
+        <nav>
+            <ul class="navegacao-lista">
+                <li><a href="/" class="navegacao-item">Início</a></li>
+                <li><a href="/curso/curso.html" class="navegacao-item">Cursos</a></li>
+                <li><a href="/secretaria/secretaria.html" class="navegacao-item">Secretaria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="secao-matricula">
+            <div class="cabecalho-formulario">
+                <h1 class="titulo-secao">Ficha de Matrícula</h1>
+                <p class="subtitulo-secao">Preencha os dados abaixo para novos alunos</p>
+            </div>
+
+            <form id="formulario-aluno" action="/aluno" method="POST">
+                <div class="grupo-campo">
+                    <label for="matricula">Número de Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula" class="entrada-dado" placeholder="Ex: 2024001" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" class="entrada-dado" placeholder="Digite o nome do aluno" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="telefone">Telefone para Contato:</label>
+                    <input type="tel" id="telefone" name="telefone" class="entrada-dado" placeholder="(84) 99999-9999" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="email">E-mail Institucional:</label>
+                    <input type="email" id="email" name="email" class="entrada-dado" placeholder="aluno@email.com" required>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="curso">Curso Desejado:</label>
+                    <select id="curso" name="curso" class="entrada-dado" required>
+                        <option value="" disabled selected>Selecione um curso</option>
+                        <option value="Desenvolvimento de Sistemas">Desenvolvimento de Sistemas</option>
+                        <option value="Informática para Internet">Informática para Internet</option>
+                        <option value="Redes de Computadores">Redes de Computadores</option>
+                        <option value="Design de Interface">Design de Interface (UX/UI)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="botao-enviar">Finalizar Matrícula</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape-institucional">
+        <p>© 2024 Inova Tech - Cadastro de Novos Talentos</p>
+    </footer>
+</body>
+
+</html>

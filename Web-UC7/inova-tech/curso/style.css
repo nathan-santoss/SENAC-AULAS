@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.cabecalho-principal {
+    background-color: #004a8d;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logotipo-imagem {
+    height: 60px;
+    display: block;
+}
+.navegacao-lista {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.navegacao-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.navegacao-item:hover {
+    color: #ff9900;
+}
+.conteudo-principal {
+    flex: 1;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao-curso {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 74, 141, 0.08);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.imagem-curso {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.informacoes-curso {
+    flex: 1;
+    min-width: 300px;
+}
+.titulo-curso {
+    color: #004a8d;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+.descricao-curso {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555555;
+}
+.secao-grade {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 74, 141, 0.08);
+}
+.titulo-secao {
+    color: #004a8d;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.tabela-grade {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.tabela-grade th {
+    background-color: #004a8d;
+    color: #ffffff;
+    padding: 18px;
+    text-align: left;
+    font-size: 1.1em;
+}
+.tabela-grade td {
+    padding: 18px;
+    border-bottom: 1px solid #e9ecef;
+    color: #444444;
+}
+.tabela-grade tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+.tabela-grade tr:hover {
+    background-color: #f1f5f9;
+}
+.rodape-institucional {
+    background-color: #004a8d;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin-top: auto;
+}
