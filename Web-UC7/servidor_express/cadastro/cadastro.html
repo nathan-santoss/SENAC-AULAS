@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .titulo {
+            text-align: center;
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        .rotulo {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .entrada {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .botao {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .botao-voltar {
+            width: 100%;
+            padding: 10px;
+            background-color: #777;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .botao-voltar:hover,
+        .botao:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+        <h1 class="titulo">Cadastro de Usuário</h1>
+
+        <form class="formulario" action="/curso" method="post">
+            <div class="campo">
+                <label class="rotulo">Nome</label>
+                <input id="input-nome" class="entrada" type="text" name="nome">
+            </div>
+
+            <div class="campo">
+                <label class="rotulo">Email</label>
+                <input id="input-email" class="entrada" type="email" name="email">
+            </div>
+
+            <div class="campo">
+                <label class="rotulo">Senha</label>
+                <input id="input-senha" class="entrada" type="password" name="senha">
+            </div>
+
+            <button class="botao" type="submit">Cadastrar</button>
+
+            <a href="/">
+                <button class="botao-voltar" type="button">
+                    Voltar
+                </button>
+            </a>
+        </form>
+    </main>
+
+</body>
+
+</html>
