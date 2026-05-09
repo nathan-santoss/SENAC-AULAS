@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Curso</title>
+
+    <link rel="stylesheet" href="/css/cursos.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="topo-pagina">
+
+            <h1>Instituto Jujutsu</h1>
+
+            <a href="/" class="voltar">
+                Voltar
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="conteudo-central">
+
+        <section class="cartao-formulario">
+
+            <div class="topo-formulario">
+
+                <span class="etiqueta-formulario">
+                    Cadastro Acadêmico
+                </span>
+
+                <h2>Novo Curso</h2>
+
+                <p>
+                    Cadastre um novo curso na plataforma do Instituto Jujutsu.
+                </p>
+
+            </div>
+
+            <form class="formulario">
+
+                <div class="grupo-campo">
+                    <label>Código do Curso</label>
+
+                    <input type="text" name="codigo_curso" placeholder="Ex: CURSO-2026">
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Nome do Curso</label>
+
+                    <input type="text" name="nome_curso" placeholder="Digite o nome do curso">
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Carga Horária</label>
+
+                    <input type="text" name="carga_horaria" placeholder="Ex: 120 horas">
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Tipo do Curso</label>
+
+                    <select name="tipo_curso">
+
+                        <option selected disabled>
+                            Selecione uma categoria
+                        </option>
+                        <!-- adicionar novos cursos aqui -->
+
+                        <!-- adicionar novos cursos aqui -->
+                    </select>
+                </div>
+
+                <button type="submit" class="botao-salvar">
+                    Cadastrar Curso
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+    <script src="/src/public/renderer/cursos.js"></script>
+</body>
+
+</html>

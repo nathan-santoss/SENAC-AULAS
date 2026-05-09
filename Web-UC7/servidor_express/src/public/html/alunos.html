@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Aluno</title>
+
+    <link rel="stylesheet" href="/css/alunos.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="topo-pagina">
+
+            <h1>Instituto Jujutsu</h1>
+
+            <a href="/" class="voltar">
+                Voltar
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="conteudo-central">
+
+        <section class="cartao-formulario">
+
+            <div class="topo-formulario">
+
+                <span class="etiqueta-formulario">
+                    Gestão Acadêmica
+                </span>
+
+                <h2>Novo Aluno</h2>
+
+                <p>
+                    Cadastre alunos na plataforma acadêmica do Instituto Jujutsu.
+                </p>
+
+            </div>
+
+            <form class="formulario">
+
+                <div class="grupo-campo">
+                    <label>Nome Completo</label>
+
+                    <input type="text" name="nome_aluno" placeholder="Digite o nome completo">
+                </div>
+
+                <div class="grupo-campo">
+                    <label>E-mail</label>
+
+                    <input type="email" name="email_aluno" placeholder="Digite o e-mail">
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Telefone</label>
+
+                    <input type="tel" name="telefone_aluno" placeholder="(00) 00000-0000">
+                </div>
+
+                <div class="grupo-campo">
+                    <label>Curso</label>
+
+                    <select name="curso_aluno">
+
+                        <option selected disabled>
+                            Selecione um curso
+                        </option>
+                        
+                        <!-- adicionar novos cursos aqui -->
+
+                        <!-- adicionar novos cursos aqui -->
+
+                    </select>
+                </div>
+
+                <button type="submit" class="botao-salvar">
+                    Cadastrar Aluno
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+    <script src="/src/public/renderer/alunos.js"></script>
+</body>
+
+</html>

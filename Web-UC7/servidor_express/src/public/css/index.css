@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f1ea;
+    color: #1d1d1d;
+}
+
+.cabecalho {
+    background: #1f2233;
+    padding: 22px 60px;
+    border-bottom: 4px solid #b22222;
+}
+
+.container-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-plataforma {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: white;
+}
+
+.logo-icone {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #b22222;
+
+    font-weight: bold;
+}
+
+.menu-navegacao {
+    display: flex;
+    gap: 18px;
+}
+
+.menu-navegacao a {
+    text-decoration: none;
+    color: #f5d0d0;
+    transition: 0.3s;
+}
+
+.menu-navegacao a:hover {
+    color: white;
+}
+
+.conteudo-principal {
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+}
+
+.secao-apresentacao {
+    width: 100%;
+    max-width: 1150px;
+
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+
+    align-items: center;
+}
+
+.etiqueta-plataforma {
+    display: inline-block;
+
+    background: #f7d6d6;
+    color: #8b0000;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 22px;
+}
+
+.informacoes-apresentacao h2 {
+    font-size: 54px;
+    line-height: 1.1;
+
+    margin-bottom: 24px;
+
+    color: #1f2233;
+}
+
+.informacoes-apresentacao p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #4b4b4b;
+
+    max-width: 620px;
+}
+
+.cartao-destaque {
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 40px rgba(31, 34, 51, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.bloco-status {
+    background: #f8f4f4;
+
+    border-left: 5px solid #b22222;
+
+    border-radius: 18px;
+
+    padding: 24px;
+}
+
+.bloco-status strong {
+    display: block;
+
+    font-size: 34px;
+
+    color: #b22222;
+
+    margin-bottom: 8px;
+}
+
+.bloco-status span {
+    color: #5a5a5a;
+}
+
+@media (max-width: 900px) {
+
+    .secao-apresentacao {
+        grid-template-columns: 1fr;
+    }
+
+    .informacoes-apresentacao h2 {
+        font-size: 40px;
+    }
+
+    .container-topo {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
